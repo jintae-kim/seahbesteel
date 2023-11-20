@@ -1002,3 +1002,55 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   color: #57595f;
   font-size: 9px;
 }
+
+
+/* table-list3 제품 저장위치 관리 */
+.table-list3 th {
+  padding: 10px 6px;
+  background: #7c80b7; 
+  border-bottom: 1px solid #c3c3c3; 
+  color: #fff; 
+  font-size: 14px; 
+  text-align: center; 
+  letter-spacing: -0.064em;
+}
+
+.table-list3 td {
+  padding: 10px 6px;
+  border-bottom: 1px solid #c3c3c3; 
+  font-size: 14px; 
+  text-align: left; 
+  color: #6a6a6a; 
+  word-break: break-all;
+}
+
+/* 야드번호,제품정보 입력 modal */
+.text-modal {
+  background-color: rgba(0,0,0,0.5);
+}
+
+.text-modal .modal-content {
+  border-radius: 0;
+}
+
+.text-modal .modal-body {
+  text-align: center;
+  padding:40px 0;
+}
+
+.text-modal .modal-body .mb-text {
+  font-size:16px;
+  color:#6a6a6a;
+}
+
+.text-modal .modal-footer {
+  padding:0;
+}
+
+.text-modal .modal-footer .btn.confirm {
+  border-radius: 0;
+  border:none;
+  margin: 0;
+  font-size:18px;
+  padding:12px 0;
+}
