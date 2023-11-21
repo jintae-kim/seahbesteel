@@ -36,7 +36,7 @@
 		<div id="header">
 			<a href="#" class="page-back">뒤로가기</a>
 
-			<h1 class="ci-logo-page text">상차주문확인</h1>
+			<h1 class="ci-logo-page text">출하 이미지 등록</h1>
 			
 			<a href="#" class="msg-home">Home</a>
 			<button type="button" class="btn menu-open">Menu</button>
@@ -78,8 +78,8 @@
 				</li>
 				<li><a href="#" class="">상차관리</a>
 					<ul class="">
-						<li class=""><a href="#" class="active">상차 주문 확인</a></li>
-						<li class=""><a href="#" class="">출하 이미지 등록</a></li>
+						<li class=""><a href="#" class="">상차 주문 확인</a></li>
+						<li class=""><a href="#" class="active">출하 이미지 등록</a></li>
 						<li class=""><a href="#" class="">컨테이너 이미지 등록</a></li>
 					</ul>
 				</li>
@@ -123,66 +123,71 @@
 									<col width="75%">
 									<tbody>										
 										<tr>
-											<th scope="row">PON</th>
+											<th scope="row">의뢰일자</th>
 											<td>
-												<input type="text" id="" value="" class="form-control input-text full-size" />
+												<label class="datepicker-wrap" style="display: flex; align-items: center; width: 100%">
+													<input type="datetime-local" id="wrkStDt" name="wrkStDt" value="" class="form-control input-text">
+												</label>
 											</td>
 										</tr>
 										<tr>
-											<th scope="row">지시량</th>
+											<th scope="row" class="required">창고</th>
 											<td>
-												<input type="text" id="" value="" class="form-control input-text full-size" />
+												<input type="text" id="barcode2" name="barcode2" value="" class="form-control input-text input-size1-btn1 barcode barcode2" placeholder="Scan" autocomplete="off" onclick="fn_barcode_Click(2)" />
 											</td>
 										</tr>
-										<tr>
-											<th scope="row">상차량</th>
+                                        <tr>
+											<th scope="row" class="required">PON</th>
 											<td>
-												<input type="text" id="" value="" class="form-control input-text full-size" />
+												<input type="text" id="barcode2" name="barcode2" value="" class="form-control input-text input-size1-btn1 barcode barcode2" placeholder="Scan" autocomplete="off" onclick="fn_barcode_Click(2)" />
 											</td>
-										</tr>
+										</tr>										
 									</tbody>
 								</table>
 	
-								<button type="submigt" class="button-submit">조회</button>
+								<button type="submit" class="button-submit">조회</button>
 							</div>
 						</div>
 						<!-- Seach table area //-->
 
 						<div class="scroll-vertical5" style="margin: 0 0px 50px 0;">
-							<div class="table-wrap" style="width: 500px;">
+							<div class="table-wrap" style="width: 700px;">
 								<table class="table-list1" id="listView2" style="width: 100%;">
 									<thead>
-										<tr>											
-											<th scope="col" width="70">선택</th>
-                                            <th scope="col" width="70">지정번들</th>
-											<th scope="col">번들</th>
-                                            <th scope="col">상차중량</th>
-                                            <th scope="col">야적번호</th>
-                                            <th scope="col">창원)LOT</th>
-                                            <th scope="col">
-                                                창원)제품번호 <br/>
-                                                단조)PON
-                                            </th>
+										<tr>
+											<th scope="col">NO</th>											
+											<th scope="col">접수유무</th>
+											<th scope="col">접수자</th>
+											<th scope="col">접수시각</th>
+											<th scope="col">요구일자</th>
+											<th scope="col">번들지정</th>
+											<th scope="col">PC</th>
+											<th scope="col">이미지 처리 건</th>
+                                            <th scope="col">example</th>											
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
-                                            <td><input type="checkbox" /></td>
-                                            <td><input type="checkbox" /></td>
-											<td>G018</td>
-                                            <td>2176</td>
-                                            <td>C11Q205</td>
-                                            <td></td>
-                                            <td></td>
+											<td>1</td>
+                                            <td><input type="checkbox"></td>
+                                            <td>MISAM</td>
+                                            <td>2023-01-20 08"01</td>
+                                            <td>2023-01-20</td>
+                                            <td><input type="checkbox"></td>
+                                            <td>E0123456</td>
+                                            <td><button class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#imageModal">이미지 처리</button></td>
+                                            <td>example</td>
 										</tr>
 										<tr>
-											<td><input type="checkbox" /></td>
-                                            <td><input type="checkbox" /></td>
-											<td>G018</td>
-                                            <td>2176</td>
-                                            <td>C11Q205</td>
-                                            <td></td>
-                                            <td></td>
+											<td>2</td>
+                                            <td><input type="checkbox"></td>
+                                            <td>MISAM</td>
+                                            <td>2023-01-20 08"01</td>
+                                            <td>2023-01-20</td>
+                                            <td><input type="checkbox"></td>
+                                            <td>E0123456</td>
+                                            <td><button class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#imageModal">이미지 처리</button></td>
+                                            <td>example</td>
 										</tr>
 									</tbody>
 								</table>
@@ -211,10 +216,10 @@
 			<div class="modal-content">
 
 				<div class="modal-header">
-				<h5 class="modal-title" id="barcodeDirectModalLabel">바코드 직접 입력</h5>
-				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
+                    <h5 class="modal-title" id="barcodeDirectModalLabel">바코드 직접 입력</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
 				</div>
 
 				<div class="modal-body">
@@ -236,6 +241,74 @@
 		</div>
     </div>
 	<!-- alert modal popup //-->
+
+    <!-- 이미지 팝업 -->
+    <div class="modal image-modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-sm">
+			<div class="modal-content">
+
+				<div class="modal-header">
+                    <h5 class="modal-title" id="imageModalModalLabel">사진선택</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+				</div>
+
+				<div class="modal-body">				
+                    <ul class="image-container">
+                        <li class="image-box" style="background-image: url(/pda/images/example.jpeg);">
+                            <input type="checkbox" id="ic1" class="image-check">
+                            <label for="ic1">
+                                <span class="check-img"></span>
+                            </label>
+                        </li>
+                        <li class="image-box" style="background-image: url(/pda/images/example.jpeg);">
+                            <input type="checkbox" id="ic2" class="image-check">
+                            <label for="ic2">
+                                <span class="check-img"></span>
+                            </label>
+                        </li>
+                        <li class="image-box" style="background-image: url(/pda/images/example.jpeg);">
+                            <input type="checkbox" id="ic3" class="image-check">
+                            <label for="ic3">
+                                <span class="check-img"></span>
+                            </label>
+                        </li>
+                        <li class="image-box" style="background-image: url(/pda/images/example.jpeg);">
+                            <input type="checkbox" id="ic4" class="image-check">
+                            <label for="ic4">
+                                <span class="check-img"></span>
+                            </label>
+                        </li>
+                        <li class="image-box" style="background-image: url(/pda/images/example.jpeg);">
+                            <input type="checkbox" id="ic5" class="image-check">
+                            <label for="ic5">
+                                <span class="check-img"></span>
+                            </label>
+                        </li>
+                        <li class="image-box" style="background-image: url(/pda/images/example.jpeg);">
+                            <input type="checkbox" id="ic6" class="image-check">
+                            <label for="ic6">
+                                <span class="check-img"></span>
+                            </label>
+                        </li>
+                    </ul>
+
+                    <div class="image-txt">
+                        <button class="btn-text btn-image-upload">사진첨부</button>
+                        <button class="btn-text btn-image-delete">삭제</button>
+                    </div>
+				</div>
+
+				<div class="modal-footer">					
+					<button type="button" id="btn_image_save" class="btn btn-primary confirm" onclick="fn_confirm(this);">저장</button>
+				</div>
+
+			</div>
+		</div>
+    </div>
+    <!-- 이미지 팝업 //-->
+
 	<!-- Footer -->
 	
     <!-- loading Modal -->
