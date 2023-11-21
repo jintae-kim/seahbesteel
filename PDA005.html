@@ -36,7 +36,7 @@
 		<div id="header">
 			<a href="#" class="page-back">뒤로가기</a>
 
-			<h1 class="ci-logo-page text">상차주문확인</h1>
+			<h1 class="ci-logo-page text">야드 불가품 관리</h1>
 			
 			<a href="#" class="msg-home">Home</a>
 			<button type="button" class="btn menu-open">Menu</button>
@@ -73,12 +73,12 @@
 				<li><a href="#" class="">입고관리</a>
 					<ul class="">
 						<li class=""><a href="#" class="">제품 저장위치 관리</a></li>
-						<li class=""><a href="#" class="">야드 불가품 관리</a></li>
+						<li class=""><a href="#" class="active">야드 불가품 관리</a></li>
 					</ul>
 				</li>
 				<li><a href="#" class="">상차관리</a>
 					<ul class="">
-						<li class=""><a href="#" class="active">상차 주문 확인</a></li>
+						<li class=""><a href="#" class="">상차 주문 확인</a></li>
 						<li class=""><a href="#" class="">출하 이미지 등록</a></li>
 						<li class=""><a href="#" class="">컨테이너 이미지 등록</a></li>
 					</ul>
@@ -123,65 +123,61 @@
 									<col width="75%">
 									<tbody>										
 										<tr>
-											<th scope="row">PON</th>
+											<th scope="row">등록일자</th>
 											<td>
-												<input type="text" id="" value="" class="form-control input-text full-size" />
+												<label class="datepicker-wrap" style="display: flex; align-items: center; width: 100%">
+													<input type="datetime-local" id="wrkStDt" name="wrkStDt" value="" class="form-control input-text">
+												</label>
 											</td>
 										</tr>
 										<tr>
-											<th scope="row">지시량</th>
+											<th scope="row" class="required">제품정보</th>
 											<td>
-												<input type="text" id="" value="" class="form-control input-text full-size" />
+												<input type="text" id="barcode2" name="barcode2" value="" class="form-control input-text input-size1-btn1 barcode barcode2" placeholder="Scan" autocomplete="off" onclick="fn_barcode_Click(2)" />
 											</td>
-										</tr>
-										<tr>
-											<th scope="row">상차량</th>
-											<td>
-												<input type="text" id="" value="" class="form-control input-text full-size" />
-											</td>
-										</tr>
+										</tr>										
 									</tbody>
 								</table>
 	
-								<button type="submigt" class="button-submit">조회</button>
+								<button type="submit" class="button-submit">조회</button>
 							</div>
 						</div>
 						<!-- Seach table area //-->
 
 						<div class="scroll-vertical5" style="margin: 0 0px 50px 0;">
-							<div class="table-wrap" style="width: 500px;">
+							<div class="table-wrap" style="width: 650px;">
 								<table class="table-list1" id="listView2" style="width: 100%;">
 									<thead>
-										<tr>											
-											<th scope="col" width="70">선택</th>
-                                            <th scope="col" width="70">지정번들</th>
+										<tr>
+											<th scope="col">NO</th>											
+											<th scope="col">입력일자</th>
+											<th scope="col">PON</th>
 											<th scope="col">번들</th>
-                                            <th scope="col">상차중량</th>
-                                            <th scope="col">야적번호</th>
-                                            <th scope="col">창원)LOT</th>
-                                            <th scope="col">
-                                                창원)제품번호 <br/>
-                                                단조)PON
-                                            </th>
+											<th scope="col">HEAT</th>
+											<th scope="col">강종명</th>
+											<th scope="col">야드번호</th>
+											<th scope="col">특기사항</th>											
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
-                                            <td><input type="checkbox" /></td>
-                                            <td><input type="checkbox" /></td>
-											<td>G018</td>
-                                            <td>2176</td>
-                                            <td>C11Q205</td>
-                                            <td></td>
+											<td>1</td>
+                                            <td>2023-01-20</td>
+                                            <td>D23SAK1211</td>
+                                            <td>001</td>
+                                            <td>A78672</td>
+                                            <td>AE1006LES</td>
+                                            <td>308</td>
                                             <td></td>
 										</tr>
 										<tr>
-											<td><input type="checkbox" /></td>
-                                            <td><input type="checkbox" /></td>
-											<td>G018</td>
-                                            <td>2176</td>
-                                            <td>C11Q205</td>
-                                            <td></td>
+											<td>2</td>
+                                            <td>2023-01-20</td>
+                                            <td>D23SAK1211</td>
+                                            <td>002</td>
+                                            <td>A78672</td>
+                                            <td>AE1006LES</td>
+                                            <td>308</td>
                                             <td></td>
 										</tr>
 									</tbody>

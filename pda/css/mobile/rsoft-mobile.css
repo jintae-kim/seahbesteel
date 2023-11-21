@@ -1013,6 +1013,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   font-size: 14px; 
   text-align: center; 
   letter-spacing: -0.064em;
+  height: 42px;
 }
 
 .table-list3 td {
@@ -1022,6 +1023,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   text-align: left; 
   color: #6a6a6a; 
   word-break: break-all;
+  height: 42px;
 }
 
 /* 야드번호,제품정보 입력 modal */

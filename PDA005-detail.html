@@ -36,7 +36,7 @@
 		<div id="header">
 			<a href="#" class="page-back">뒤로가기</a>
 
-			<h1 class="ci-logo-page text">상차주문확인</h1>
+			<h1 class="ci-logo-page text">야드 불가품 관리</h1>
 			
 			<a href="#" class="msg-home">Home</a>
 			<button type="button" class="btn menu-open">Menu</button>
@@ -73,12 +73,12 @@
 				<li><a href="#" class="">입고관리</a>
 					<ul class="">
 						<li class=""><a href="#" class="">제품 저장위치 관리</a></li>
-						<li class=""><a href="#" class="">야드 불가품 관리</a></li>
+						<li class=""><a href="#" class="active">야드 불가품 관리</a></li>
 					</ul>
 				</li>
 				<li><a href="#" class="">상차관리</a>
 					<ul class="">
-						<li class=""><a href="#" class="active">상차 주문 확인</a></li>
+						<li class=""><a href="#" class="">상차 주문 확인</a></li>
 						<li class=""><a href="#" class="">출하 이미지 등록</a></li>
 						<li class=""><a href="#" class="">컨테이너 이미지 등록</a></li>
 					</ul>
@@ -113,77 +113,40 @@
 					<input type="hidden" name="rwmatReqId" id="rwmatReqId">
 					<input type="hidden" name="chklist">
 
-					<fieldset class="table-field">						
-						
-						<!-- Seach table area -->
-						<div class="search-section-1">
-							<div class="search-table-area">
-								<table class="table-search1" width="100%">
-									<col width="25%">
-									<col width="75%">
-									<tbody>										
-										<tr>
-											<th scope="row">PON</th>
-											<td>
-												<input type="text" id="" value="" class="form-control input-text full-size" />
-											</td>
-										</tr>
-										<tr>
-											<th scope="row">지시량</th>
-											<td>
-												<input type="text" id="" value="" class="form-control input-text full-size" />
-											</td>
-										</tr>
-										<tr>
-											<th scope="row">상차량</th>
-											<td>
-												<input type="text" id="" value="" class="form-control input-text full-size" />
-											</td>
-										</tr>
-									</tbody>
-								</table>
-	
-								<button type="submigt" class="button-submit">조회</button>
-							</div>
-						</div>
-						<!-- Seach table area //-->
+					<fieldset class="table-field">																	
 
-						<div class="scroll-vertical5" style="margin: 0 0px 50px 0;">
-							<div class="table-wrap" style="width: 500px;">
-								<table class="table-list1" id="listView2" style="width: 100%;">
-									<thead>
-										<tr>											
-											<th scope="col" width="70">선택</th>
-                                            <th scope="col" width="70">지정번들</th>
-											<th scope="col">번들</th>
-                                            <th scope="col">상차중량</th>
-                                            <th scope="col">야적번호</th>
-                                            <th scope="col">창원)LOT</th>
-                                            <th scope="col">
-                                                창원)제품번호 <br/>
-                                                단조)PON
-                                            </th>
-										</tr>
-									</thead>
+						<div class="" style="margin: 0 0px 50px 0;">
+							<div class="table-wrap">
+								<table class="table-list3" id="listView2" style="width: 100%;">
+                                    <colgroup>
+                                        <col width="120">
+                                        <col width="*">
+                                    </colgroup>
 									<tbody>
-										<tr>
-                                            <td><input type="checkbox" /></td>
-                                            <td><input type="checkbox" /></td>
-											<td>G018</td>
-                                            <td>2176</td>
-                                            <td>C11Q205</td>
+                                        <tr>
+                                            <th>창고번호</th>
+                                            <td>308</td>
+                                        </tr>                                                                                
+                                        <tr>
+                                            <th>PON</th>
+                                            <td>D23SAK1211</td>
+                                        </tr>
+                                        <tr>
+                                            <th>번들번호</th>
+                                            <td>006</td>
+                                        </tr>
+                                        <tr>
+                                            <th>제조일자</th>
+                                            <td>2023-12-01</td>
+                                        </tr>
+                                        <tr>
+                                            <th>야드변경이력</th>
                                             <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th></th>
                                             <td></td>
-										</tr>
-										<tr>
-											<td><input type="checkbox" /></td>
-                                            <td><input type="checkbox" /></td>
-											<td>G018</td>
-                                            <td>2176</td>
-                                            <td>C11Q205</td>
-                                            <td></td>
-                                            <td></td>
-										</tr>
+                                        </tr>
 									</tbody>
 								</table>
 							</div>
@@ -192,8 +155,14 @@
 
 						<!-- 하단고정 버튼 -->
 						<ul class="button-bottom">
+                            <li>
+								<input type="submit" id="btn_close" value="닫기" class="btn btn-default col-33">
+							</li>
+                            <li>
+								<input type="submit" id="btn_cancle" value="취소" class="btn btn-cancel col-33">
+							</li>
 							<li>
-								<input type="submit" id="btn_regist" value="저장" class="btn btn-regist col-100">
+								<input type="submit" id="btn_regist" value="저장" class="btn btn-regist col-33">
 							</li>
 						</ul>
 						<!-- 하단고정 버튼 //-->
@@ -227,8 +196,7 @@
 				<!-- 내용 //-->
 				</div>
 
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+				<div class="modal-footer">					
 					<button type="button" id="btn_direct_barcode" class="btn btn-primary confirm" onclick="fn_confirm(this);">확인</button>
 				</div>
 
@@ -236,6 +204,54 @@
 		</div>
     </div>
 	<!-- alert modal popup //-->
+
+    <!-- 야드번호 입력 popup -->
+    <div class="text-modal modal fade" id="yardNumberModal" tabindex="-1" aria-labelledby="yardNumberModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-sm">
+			<div class="modal-content">
+
+				<div class="modal-body">
+				
+                    <!-- 내용 -->
+                    <div class="modal-msg1">
+                        <p class="mb-text">야드번호를 입력 하십시오.</p>
+                    </div>
+                    <!-- 내용 //-->
+				</div>
+
+				<div class="modal-footer">					
+					<button type="button" class="btn btn-primary confirm" data-bs-dismiss="modal" aria-label="Close">확인</button>
+				</div>
+
+			</div>
+		</div>
+    </div>
+    <!--// 야드번호 입력 popup -->
+
+    <!-- 제품정보 입력 popup -->
+    <div class="text-modal modal fade" id="productNumberModal" tabindex="-1" aria-labelledby="productNumberModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-sm">
+			<div class="modal-content">
+
+				<div class="modal-body">
+				
+                    <!-- 내용 -->
+                    <div class="modal-msg1">
+                        <p class="mb-text">제품번호를 입력 하십시오.</p>
+                    </div>
+                    <!-- 내용 //-->
+				</div>
+
+				<div class="modal-footer">					
+					<button type="button" class="btn btn-primary confirm" data-bs-dismiss="modal" aria-label="Close">확인</button>
+				</div>
+
+			</div>
+		</div>
+    </div>
+    <!--// 제품정보 입력 popup -->
+
+
 	<!-- Footer -->
 	
     <!-- loading Modal -->
