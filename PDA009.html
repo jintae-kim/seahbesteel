@@ -139,7 +139,7 @@
 									</tbody>
 								</table>
 	
-								<button type="submit" class="button-submit">조회</button>
+								<button type="submit" class="button-submit" data-bs-toggle="modal" data-bs-target="#yardNumberModal">조회</button>
 							</div>
 						</div>
 						<!-- Seach table area //-->
@@ -217,8 +217,7 @@
 				<!-- 내용 //-->
 				</div>
 
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+				<div class="modal-footer">					
 					<button type="button" id="btn_direct_barcode" class="btn btn-primary confirm" onclick="fn_confirm(this);">확인</button>
 				</div>
 
@@ -245,6 +244,29 @@
 		</div>
 	</div>
     <!-- loading Modal //-->
+
+    <!-- 야드번호 입력 popup -->
+    <div class="text-modal modal fade" id="yardNumberModal" tabindex="-1" aria-labelledby="yardNumberModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-sm">
+			<div class="modal-content">
+
+				<div class="modal-body">
+				
+                    <!-- 내용 -->
+                    <div class="modal-msg1">
+                        <p class="mb-text">야드번호를 입력 하십시오.</p>
+                    </div>
+                    <!-- 내용 //-->
+				</div>
+
+				<div class="modal-footer">					
+					<button type="button" class="btn btn-primary confirm" data-bs-dismiss="modal" aria-label="Close">확인</button>
+				</div>
+
+			</div>
+		</div>
+    </div>
+    <!--// 야드번호 입력 popup -->
     
 	<!-- Loading -->
 	<div class="loading" style="display : none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 9999; width: 100%; height: 100%; text-align: center; background: rgba(255,255,255,0.8);">

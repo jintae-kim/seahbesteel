@@ -1054,3 +1054,44 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   font-size:18px;
   padding:12px 0;
 }
+
+/* 바코드 모달 */
+.barcode-modal .modal-content {
+  border-radius: 0;
+}
+
+.barcode-modal .modal-content .modal-header {
+  background-color: #fff;
+}  
+
+.barcode-modal .modal-content .modal-header h5 {
+  color:#000;
+}
+
+.barcode-modal .modal-content .modal-header button {
+  background-color: #fff;
+  font-size:22px;
+}
+
+.barcode-modal .modal-content .modal-body {
+  padding:30px 15px;
+}
+
+.barcode-modal .modal-content .modal-body #direct-barcode {
+  border:1px solid #8e90ad;
+  height: 44px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.barcode-modal .modal-content .modal-footer {
+  padding:0;
+}
+
+.barcode-modal .modal-content .modal-footer button {
+  border-radius: 0;
+  border:none;
+  margin: 0;
+  font-size:18px;
+  padding:12px 0;
+}
