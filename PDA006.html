@@ -78,8 +78,8 @@
 				</li>
 				<li><a href="#" class="">상차관리</a>
 					<ul class="">
-						<li class=""><a href="#" class="">상차 주문 확인</a></li>
-						<li class=""><a href="#" class="active">출하 이미지 등록</a></li>
+						<li class=""><a href="#" class="active">상차 주문 확인</a></li>
+						<li class=""><a href="#" class="">출하 이미지 등록</a></li>
 						<li class=""><a href="#" class="">컨테이너 이미지 등록</a></li>
 					</ul>
 				</li>
@@ -119,8 +119,8 @@
 						<div class="search-section-1">
 							<div class="search-table-area">
 								<table class="table-search1" width="100%">
-									<col width="25%">
-									<col width="75%">
+									<col width="110px">
+									<col width="">
 									<tbody>										
 										<tr>
 											<th scope="row">지시일자</th>
@@ -131,19 +131,19 @@
 											</td>
 										</tr>
 										<tr>
-											<th scope="row" class="required">DO</th>
+											<th scope="row" class="required">상차주문서바코드</th>
 											<td>
 												<input type="text" id="barcode2" name="barcode2" value="" class="form-control input-text input-size1-btn1 barcode barcode2" placeholder="Scan" autocomplete="off" onclick="fn_barcode_Click(2)" />
 											</td>
 										</tr>
 										<tr>
-											<th scope="row">가차량</th>
+											<th scope="row">가차량번호</th>
 											<td>
 												<input type="text" id="" value="" class="form-control input-text full-size" />
 											</td>
 										</tr>
 										<tr>
-											<th scope="row">창고</th>
+											<th scope="row">PON</th>
 											<td>
 												<input type="text" id="" value="" class="form-control input-text full-size" />
 											</td>
@@ -157,64 +157,43 @@
 						<!-- Seach table area //-->
 
 						<div class="scroll-vertical5" style="margin: 0 0px 50px 0;">
-							<div class="table-wrap" style="width: 1200px;">
+							<div class="table-wrap" style="width:600px;">
 								<table class="table-list1" id="listView2" style="width: 100%;">
 									<thead>
 										<tr>
-											<th scope="col">창고</th>
-											<th scope="col" width="70">상차번호</th>
-											<th scope="col">상차행번</th>
-											<th scope="col">번들지정</th>
-											<th scope="col">가차량</th>
-											<th scope="col">상차량</th>
-											<th scope="col">PON</th>
+											<th scope="col">NO</th>
+											<th scope="col" width="70">상차<br/>확정</th>
+											<th scope="col" width="70">상차<br/>지시</th>
+											<th scope="col" width="70">지정<br/>번들</th>
+											<th scope="col">번들</th>
 											<th scope="col">지시량</th>
 											<th scope="col">상차량</th>
-											<th scope="col">운송사</th>
-											<th scope="col">운전자</th>
-											<th scope="col">연락처</th>
-											<th scope="col">구분</th>
-											<th scope="col">거래처명</th>
-											<th scope="col">최종거래처</th>
-											<th scope="col">1차계근</th>
+											<th scope="col">출하량</th>
+											<th scope="col">야드</th>											
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
-											<td>C11</td>
-											<td>SG202311130198</td>
-											<td>0001</td>
+											<td>1</td>
 											<td><input type="checkbox" /></td>
-											<td>00006</td>
-											<td>1548</td>
-											<td>D23SAK0894</td>
-											<td>8702</td>
-											<td>0</td>
-											<td>주식회사주식회사</td>
-											<td>홍길동</td>
-											<td>01012345678</td>
-											<td>ON</td>
-											<td>주식회사주식회사</td>
-											<td>일진글로벌</td>
-											<td>2023-11-15 08:39</td>
+											<td><input type="checkbox" /></td>
+											<td><input type="checkbox" /></td>
+											<td>001</td>
+											<td>300</td>
+											<td>300</td>
+											<td>300</td>
+											<td>c001</td>											
 										</tr>
 										<tr>
-											<td>C11</td>
-											<td>SG202311130198</td>
-											<td>0001</td>
+											<td>2</td>
 											<td><input type="checkbox" /></td>
-											<td>00006</td>
-											<td>1548</td>
-											<td>D23SAK0894</td>
-											<td>8702</td>
-											<td>0</td>
-											<td>주식회사주식회사</td>
-											<td>홍길동</td>
-											<td>01012345678</td>
-											<td>ON</td>
-											<td>주식회사주식회사</td>
-											<td>일진글로벌</td>
-											<td>2023-11-15 08:39</td>
+											<td><input type="checkbox" /></td>
+											<td><input type="checkbox" /></td>
+											<td>002</td>
+											<td>300</td>
+											<td>300</td>
+											<td>300</td>
+											<td>c001</td>
 										</tr>
 									</tbody>
 								</table>
