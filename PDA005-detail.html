@@ -36,7 +36,7 @@
 		<div id="header">
 			<a href="#" class="page-back">뒤로가기</a>
 
-			<h1 class="ci-logo-page text">제품 위치정보 조회</h1>
+			<h1 class="ci-logo-page text">야드 불가품 관리</h1>
 			
 			<a href="#" class="msg-home">Home</a>
 			<button type="button" class="btn menu-open">Menu</button>
@@ -73,7 +73,7 @@
 				<li><a href="#" class="">입고관리</a>
 					<ul class="">
 						<li class=""><a href="#" class="">제품 저장위치 관리</a></li>
-						<li class=""><a href="#" class="">야드 불가품 관리</a></li>
+						<li class=""><a href="#" class="active">야드 불가품 관리</a></li>
 					</ul>
 				</li>
 				<li><a href="#" class="">상차관리</a>
@@ -86,7 +86,7 @@
 				<li><a href="#" class="">재고관리</a>
 					<ul class="">
 						<li class=""><a href="#" class="">재고 실사 관리</a></li>
-						<li class=""><a href="#" class="active">제품 위치정보 확인</a></li>
+						<li class=""><a href="#" class="">제품 위치정보 확인</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -113,40 +113,7 @@
 					<input type="hidden" name="rwmatReqId" id="rwmatReqId">
 					<input type="hidden" name="chklist">
 
-					<fieldset class="table-field">						
-						
-						<!-- Seach table area -->
-						<div class="search-section-1">
-							<div class="search-table-area">
-								<table class="table-search1" width="100%">
-									<col width="25%">
-									<col width="75%">
-									<tbody>																				
-										<tr>
-											<th scope="row" class="required">야드번호</th>
-											<td>
-												<input type="text" id="barcode2" name="barcode2" value="" class="form-control input-text input-size1-btn1 barcode barcode2" placeholder="Scan" autocomplete="off" onclick="fn_barcode_Click(2)" />
-											</td>
-										</tr>
-										<tr>
-											<th scope="row" class="required">제품정보</th>
-											<td>
-												<input type="text" id="barcode3" name="barcode3" value="" class="form-control input-text input-size1-btn1 barcode barcode2" placeholder="Scan" autocomplete="off" onclick="fn_barcode_Click(3)" />
-											</td>
-										</tr>
-                                        <tr>
-											<th scope="row">HEAT</th>
-											<td>
-												<input type="text" id="" value="" class="form-control input-text full-size" />
-											</td>
-										</tr>
-									</tbody>
-								</table>
-	
-								<button type="submit" class="button-submit" data-bs-toggle="modal" data-bs-target="#yardNumberModal">조회</button>
-							</div>
-						</div>
-						<!-- Seach table area //-->
+					<fieldset class="table-field">																	
 
 						<div class="" style="margin: 0 0px 50px 0;">
 							<div class="table-wrap">
@@ -155,15 +122,11 @@
                                         <col width="120">
                                         <col width="*">
                                     </colgroup>
-									<tbody>                          
+									<tbody>
                                         <tr>
                                             <th>창고번호</th>
                                             <td>308</td>
-                                        </tr>
-                                        <tr>
-                                            <th>제품상태</th>
-                                            <td>정상/임가공/제공/야드불가품</td>
-                                        </tr> 
+                                        </tr>                                                                                
                                         <tr>
                                             <th>PON</th>
                                             <td>D23SAK1211</td>
@@ -180,6 +143,10 @@
                                             <th>야드변경이력</th>
                                             <td></td>
                                         </tr>
+                                        <tr>
+                                            <th></th>
+                                            <td></td>
+                                        </tr>
 									</tbody>
 								</table>
 							</div>
@@ -189,10 +156,13 @@
 						<!-- 하단고정 버튼 -->
 						<ul class="button-bottom">
                             <li>
-								<input type="submit" id="btn_close" value="닫기" class="btn btn-default col-40">
+								<input type="submit" id="btn_close" value="닫기" class="btn btn-default col-33">
+							</li>
+                            <li>
+								<input type="submit" id="btn_cancle" value="취소" class="btn btn-cancel col-33">
 							</li>
 							<li>
-								<input type="submit" id="btn_regist" value="저장" class="btn btn-regist col-60">
+								<input type="submit" id="btn_regist" value="저장" class="btn btn-regist col-33">
 							</li>
 						</ul>
 						<!-- 하단고정 버튼 //-->

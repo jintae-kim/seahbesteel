@@ -1013,6 +1013,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   font-size: 14px; 
   text-align: center; 
   letter-spacing: -0.064em;
+  height: 42px;
 }
 
 .table-list3 td {
@@ -1022,6 +1023,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   text-align: left; 
   color: #6a6a6a; 
   word-break: break-all;
+  height: 42px;
 }
 
 /* 야드번호,제품정보 입력 modal */
@@ -1053,4 +1055,154 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   margin: 0;
   font-size:18px;
   padding:12px 0;
+}
+
+/* 바코드 모달 */
+.barcode-modal .modal-content {
+  border-radius: 0;
+}
+
+.barcode-modal .modal-content .modal-header {
+  background-color: #fff;
+}  
+
+.barcode-modal .modal-content .modal-header h5 {
+  color:#000;
+}
+
+.barcode-modal .modal-content .modal-header button {
+  background-color: #fff;
+  font-size:22px;
+}
+
+.barcode-modal .modal-content .modal-body {
+  padding:30px 15px;
+}
+
+.barcode-modal .modal-content .modal-body #direct-barcode {
+  border:1px solid #8e90ad;
+  height: 44px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.barcode-modal .modal-content .modal-footer {
+  padding:0;
+}
+
+.barcode-modal .modal-content .modal-footer button {
+  border-radius: 0;
+  border:none;
+  margin: 0;
+  font-size:18px;
+  padding:12px 0;
+}
+
+/* 이미지 모달 */
+.image-modal .modal-content {
+  border-radius: 0;
+}
+
+.image-modal .modal-content .modal-header {
+  background-color: #fff;
+}  
+
+.image-modal .modal-content .modal-header h5 {
+  color:#000;
+}
+
+.image-modal .modal-content .modal-header button {
+  background-color: #fff;
+  font-size:22px;
+}
+
+.image-modal .modal-content .modal-footer {
+  padding:0;
+}
+
+.image-modal .modal-content .modal-footer button {
+  border-radius: 0;
+  border:none;
+  margin: 0;
+  font-size:18px;
+  padding:12px 0;
+}
+
+.image-modal .modal-content .modal-body .image-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.image-modal .modal-content .modal-body .image-container .image-box {
+  width: 33.33%;
+  padding-top:33.33%;
+  overflow: hidden;
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border:1px solid #fff;
+}
+
+.image-modal .modal-content .modal-body .image-container .image-box .image-check {
+  position:absolute;
+  top:0;
+  left:0;
+  width: 1px;
+  height: 1px;
+  visibility: hidden;
+}
+
+.image-modal .modal-content .modal-body .image-container .image-box .image-check + label {
+  position: absolute;
+  top:10px;
+  right:10px;
+}
+
+.image-modal .modal-content .modal-body .image-container .image-box .image-check + label .check-img {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image:url('/pda/images/ico-check.png');
+  border-radius: 50%;
+  background-size: 100%;
+  position: top center;
+}
+
+.image-modal .modal-content .modal-body .image-container .image-box .image-check:checked + label .check-img {
+  background-position: bottom center;
+}
+
+.image-modal .modal-content .modal-body .image-txt {
+  margin-bottom: 10px;
+}
+
+.image-modal .modal-content .modal-body .image-txt .btn-text {
+  background:none;
+  font-weight: bold;
+  padding-left:10px;
+  margin-left: 10px;
+  position: relative;
+}
+
+.image-modal .modal-content .modal-body .image-txt .btn-text::after {
+  content:"";
+  display: block;
+  width: 1px;
+  height: 10px;
+  background-color: #ddd;
+  position: absolute;
+  left:0;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+.image-modal .modal-content .modal-body .image-txt .btn-text:first-child {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.image-modal .modal-content .modal-body .image-txt .btn-text:first-child::after {
+  display: none;
 }

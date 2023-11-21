@@ -36,7 +36,7 @@
 		<div id="header">
 			<a href="#" class="page-back">뒤로가기</a>
 
-			<h1 class="ci-logo-page text">제품 위치정보 조회</h1>
+			<h1 class="ci-logo-page text">재고 실사 관리</h1>
 			
 			<a href="#" class="msg-home">Home</a>
 			<button type="button" class="btn menu-open">Menu</button>
@@ -85,8 +85,8 @@
 				</li>
 				<li><a href="#" class="">재고관리</a>
 					<ul class="">
-						<li class=""><a href="#" class="">재고 실사 관리</a></li>
-						<li class=""><a href="#" class="active">제품 위치정보 확인</a></li>
+						<li class=""><a href="#" class="active">재고 실사 관리</a></li>
+						<li class=""><a href="#" class="">제품 위치정보 확인</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -120,26 +120,22 @@
 							<div class="search-table-area">
 								<table class="table-search1" width="100%">
 									<col width="25%">
-									<col width="75%">
-									<tbody>																				
+									<col width="">
+									<tbody>										
 										<tr>
-											<th scope="row" class="required">야드번호</th>
+											<th scope="row">실시일자</th>
+											<td>
+												<label class="datepicker-wrap" style="display: flex; align-items: center; width: 100%">
+													<input type="datetime-local" id="wrkStDt" name="wrkStDt" value="" class="form-control input-text">
+												</label>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row" class="required">야드</th>
 											<td>
 												<input type="text" id="barcode2" name="barcode2" value="" class="form-control input-text input-size1-btn1 barcode barcode2" placeholder="Scan" autocomplete="off" onclick="fn_barcode_Click(2)" />
 											</td>
-										</tr>
-										<tr>
-											<th scope="row" class="required">제품정보</th>
-											<td>
-												<input type="text" id="barcode3" name="barcode3" value="" class="form-control input-text input-size1-btn1 barcode barcode2" placeholder="Scan" autocomplete="off" onclick="fn_barcode_Click(3)" />
-											</td>
-										</tr>
-                                        <tr>
-											<th scope="row">HEAT</th>
-											<td>
-												<input type="text" id="" value="" class="form-control input-text full-size" />
-											</td>
-										</tr>
+										</tr>										
 									</tbody>
 								</table>
 	
@@ -148,38 +144,36 @@
 						</div>
 						<!-- Seach table area //-->
 
-						<div class="" style="margin: 0 0px 50px 0;">
-							<div class="table-wrap">
-								<table class="table-list3" id="listView2" style="width: 100%;">
-                                    <colgroup>
-                                        <col width="120">
-                                        <col width="*">
-                                    </colgroup>
-									<tbody>                          
-                                        <tr>
-                                            <th>창고번호</th>
-                                            <td>308</td>
-                                        </tr>
-                                        <tr>
-                                            <th>제품상태</th>
-                                            <td>정상/임가공/제공/야드불가품</td>
-                                        </tr> 
-                                        <tr>
-                                            <th>PON</th>
-                                            <td>D23SAK1211</td>
-                                        </tr>
-                                        <tr>
-                                            <th>번들번호</th>
-                                            <td>006</td>
-                                        </tr>
-                                        <tr>
-                                            <th>제조일자</th>
-                                            <td>2023-12-01</td>
-                                        </tr>
-                                        <tr>
-                                            <th>야드변경이력</th>
-                                            <td></td>
-                                        </tr>
+						<div class="scroll-vertical5" style="margin: 0 0px 50px 0;">
+							<div class="table-wrap" style="width:100%;">
+								<table class="table-list1" id="listView2" style="width: 100%;">
+									<thead>
+										<tr>
+											<th scope="col">NO</th>											
+											<th scope="col">실시일자</th>
+											<th scope="col">야드</th>
+											<th scope="col">PON</th>
+											<th scope="col">번들</th>
+											<th scope="col">수량</th>											
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>2023-01-20</td>
+											<td>308</td>
+											<td>D23SAK1211</td>
+											<td>001</td>
+											<td>30</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>2023-01-20</td>
+											<td>308</td>
+											<td>D23SAK1211</td>
+											<td>002</td>
+											<td>30</td>											
+										</tr>
 									</tbody>
 								</table>
 							</div>
@@ -188,11 +182,8 @@
 
 						<!-- 하단고정 버튼 -->
 						<ul class="button-bottom">
-                            <li>
-								<input type="submit" id="btn_close" value="닫기" class="btn btn-default col-40">
-							</li>
 							<li>
-								<input type="submit" id="btn_regist" value="저장" class="btn btn-regist col-60">
+								<input type="submit" id="btn_regist" value="저장" class="btn btn-regist col-100">
 							</li>
 						</ul>
 						<!-- 하단고정 버튼 //-->
@@ -234,6 +225,25 @@
 		</div>
     </div>
 	<!-- alert modal popup //-->
+	<!-- Footer -->
+	
+    <!-- loading Modal -->
+	<div class="modal" id="loadingleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
+		<div class="modal-dialog loading-modal">
+			<div class="modal-content">
+			  
+				<div class="modal-body">
+				
+		            <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem; z-index: 20;">
+	              		<span class="sr-only">Loading...</span>
+		            </div>
+	
+				</div>
+			  
+			</div>
+		</div>
+	</div>
+    <!-- loading Modal //-->
 
     <!-- 야드번호 입력 popup -->
     <div class="text-modal modal fade" id="yardNumberModal" tabindex="-1" aria-labelledby="yardNumberModalLabel" aria-hidden="true">
@@ -257,50 +267,6 @@
 		</div>
     </div>
     <!--// 야드번호 입력 popup -->
-
-    <!-- 제품정보 입력 popup -->
-    <div class="text-modal modal fade" id="productNumberModal" tabindex="-1" aria-labelledby="productNumberModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered modal-sm">
-			<div class="modal-content">
-
-				<div class="modal-body">
-				
-                    <!-- 내용 -->
-                    <div class="modal-msg1">
-                        <p class="mb-text">제품번호를 입력 하십시오.</p>
-                    </div>
-                    <!-- 내용 //-->
-				</div>
-
-				<div class="modal-footer">					
-					<button type="button" class="btn btn-primary confirm" data-bs-dismiss="modal" aria-label="Close">확인</button>
-				</div>
-
-			</div>
-		</div>
-    </div>
-    <!--// 제품정보 입력 popup -->
-
-
-	<!-- Footer -->
-	
-    <!-- loading Modal -->
-	<div class="modal" id="loadingleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
-		<div class="modal-dialog loading-modal">
-			<div class="modal-content">
-			  
-				<div class="modal-body">
-				
-		            <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem; z-index: 20;">
-	              		<span class="sr-only">Loading...</span>
-		            </div>
-	
-				</div>
-			  
-			</div>
-		</div>
-	</div>
-    <!-- loading Modal //-->
     
 	<!-- Loading -->
 	<div class="loading" style="display : none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 9999; width: 100%; height: 100%; text-align: center; background: rgba(255,255,255,0.8);">

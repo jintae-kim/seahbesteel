@@ -145,7 +145,7 @@
 									</tbody>
 								</table>
 	
-								<button type="submit" class="button-submit">조회</button>
+								<button type="submit" class="button-submit" data-bs-toggle="modal" data-bs-target="#yardNumberModal">조회</button>
 							</div>
 						</div>
 						<!-- Seach table area //-->
@@ -191,7 +191,7 @@
 						<!-- 하단고정 버튼 -->
 						<ul class="button-bottom">
                             <li>
-								<input type="submit" id="btn_regist" value="조회" class="btn btn-default col-40" data-bs-toggle="modal" data-bs-target="#yardNumberModal">
+								<input type="submit" id="btn_close" value="닫기" class="btn btn-default col-40">
 							</li>
 							<li>
 								<input type="submit" id="btn_regist" value="저장" class="btn btn-regist col-60">
@@ -207,7 +207,7 @@
 	<!-- Wrap //-->
 
 	<!-- alert modal popup -->
-    <div class="modal fade" id="barcodeDirectModal" tabindex="-1" aria-labelledby="barcodeDirectModalLabel" aria-hidden="true">
+    <div class="modal barcode-modal fade" id="barcodeDirectModal" tabindex="-1" aria-labelledby="barcodeDirectModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered modal-sm">
 			<div class="modal-content">
 
@@ -228,8 +228,7 @@
 				<!-- 내용 //-->
 				</div>
 
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+				<div class="modal-footer">					
 					<button type="button" id="btn_direct_barcode" class="btn btn-primary confirm" onclick="fn_confirm(this);">확인</button>
 				</div>
 
