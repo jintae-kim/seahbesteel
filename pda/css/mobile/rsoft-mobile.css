@@ -250,7 +250,7 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
 /* Aside 2020.01.03 수정 */
 #aside {transform: translate(-100%, 0); -webkit-transform: translate(-100%, 0); transition: all 0.2s; -webkit-transition: all 0.2s;}
 #aside.open {transform: translate(0, 0); -webkit-transform: translate(0, 0); transition: all 0.2s; -webkit-transition: all 0.2s;}
-#aside {position: fixed; z-index: 900; top: 0; bottom: 0; left: 0; overflow-y: auto; width: 100%; background:#20222a; background-size: 100%;}
+#aside {position: fixed; z-index: 1061; top: 0; bottom: 0; left: 0; overflow-y: auto; width: 100%; background:#20222a; background-size: 100%;}
 #aside .aside-logo {margin: 0 0 0 16px; width: 118px; height: 18px; text-indent: -999999em; background: url('../../images/logo-seahbesteel-white.png') no-repeat left top; background-size: 100%; }
 #aside .menu-close {position: fixed; top: 26px; right: 16px; width: 32px; height: 32px; text-indent: -999999em; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.0007 10.5865L16.9504 5.63672L18.3646 7.05093L13.4149 12.0007L18.3646 16.9504L16.9504 18.3646L12.0007 13.4149L7.05093 18.3646L5.63672 16.9504L10.5865 12.0007L5.63672 7.05093L7.05093 5.63672L12.0007 10.5865Z" fill="%23FFFFFF" stroke="%23FFFFFF" stroke-width=".5"></path></svg>') no-repeat left top; background-size: 32px 32px;}
 .aside-func-menu {overflow: hidden; height: 50px; margin-top: 0px; padding: 1px 0 0 0; color: #fff; background: url("../../images/bg-grline1.gif") no-repeat center top #61646b;}
@@ -1205,4 +1205,51 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 
 .image-modal .modal-content .modal-body .image-txt .btn-text:first-child::after {
   display: none;
+}
+
+
+/* 상세 모달 */
+.detail-modal {
+  top:auto;
+  bottom:0;
+  height:calc(100% - 60px);
+}
+
+.detail-modal .modal-body {
+  padding: 0;
+}
+
+.detail-modal .modal-footer {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  border-top:0;
+  flex-wrap: nowrap;
+}
+
+.detail-modal .modal-footer .btn {
+  margin: 0;
+  border-radius: 0;
+  width: 33.33%;
+  flex:auto;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  border:0;
+  font-size:16px;
+  font-weight: 700;
+  color:#fff;
+}
+
+.detail-modal .modal-footer .btn-regist {
+  background: #db461d;    
+}
+
+.detail-modal .modal-footer .btn-close {
+  background-color:#838a90;
+  background-image: none;
+}
+
+.detail-modal .modal-footer .btn-cancle {
+  background-color:#263139;
 }

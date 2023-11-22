@@ -145,7 +145,7 @@
 						<!-- Seach table area //-->
 
 						<div class="scroll-vertical5" style="margin: 0 0px 50px 0;">
-							<div class="table-wrap" style="width: 650px;">
+							<div class="table-wrap" style="min-width: 650px; width: 100%;">
 								<table class="table-list1" id="listView2" style="width: 100%;">
 									<thead>
 										<tr>
@@ -160,7 +160,7 @@
 										</tr>
 									</thead>
 									<tbody>
-										<tr>
+										<tr data-bs-toggle="modal" data-bs-target="#yardDetailModal">
 											<td>1</td>
                                             <td>2023-01-20</td>
                                             <td>D23SAK1211</td>
@@ -170,7 +170,7 @@
                                             <td>308</td>
                                             <td></td>
 										</tr>
-										<tr>
+										<tr data-bs-toggle="modal" data-bs-target="#yardDetailModal">
 											<td>2</td>
                                             <td>2023-01-20</td>
                                             <td>D23SAK1211</td>
@@ -186,13 +186,13 @@
 						</div>
 						<!-- 검색조건입력 //-->
 
-						<!-- 하단고정 버튼 -->
+						<!-- 하단고정 버튼 
 						<ul class="button-bottom">
 							<li>
 								<input type="submit" id="btn_regist" value="저장" class="btn btn-regist col-100">
 							</li>
 						</ul>
-						<!-- 하단고정 버튼 //-->
+						하단고정 버튼 //-->
 					</fieldset>
 				</form>
 			</div>
@@ -232,6 +232,64 @@
 		</div>
     </div>
 	<!-- alert modal popup //-->
+
+	<!-- 상세팝업 -->
+	<div class="modal detail-modal fade" id="yardDetailModal" tabindex="-1" aria-labelledby="yardDetailModalLabel" aria-hidden="true" data-bs-backdrop="false">
+		<div class="modal-dialog modal-dialog-centered modal-fullscreen">
+			<div class="modal-content">
+
+				<div class="modal-body">				
+				<!-- 내용 -->
+				<div class="" style="margin: 0 0px 50px 0;">
+					<div class="table-wrap">
+						<table class="table-list3" id="listView2" style="width: 100%;">
+							<colgroup>
+								<col width="120">
+								<col width="*">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>창고번호</th>
+									<td>308</td>
+								</tr>                                                                                
+								<tr>
+									<th>PON</th>
+									<td>D23SAK1211</td>
+								</tr>
+								<tr>
+									<th>번들번호</th>
+									<td>006</td>
+								</tr>
+								<tr>
+									<th>제조일자</th>
+									<td>2023-12-01</td>
+								</tr>
+								<tr>
+									<th>야드변경이력</th>
+									<td></td>
+								</tr>
+								<tr>
+									<th></th>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- 내용 //-->
+				</div>
+
+				<div class="modal-footer">					
+					<button type="button" class="btn btn-close" data-bs-dismiss="modal">닫기</button>
+					<button type="button" class="btn btn-cancle" data-bs-dismiss="modal">취소</button>
+					<button type="button" class="btn btn-regist" onclick="fn_confirm(this);">저장</button>					
+				</div>
+
+			</div>
+		</div>
+    </div>
+	<!-- 상세팝업 //-->
+
 	<!-- Footer -->
 	
     <!-- loading Modal -->
