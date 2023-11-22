@@ -180,7 +180,7 @@
 										</tr>
 									</thead>
 									<tbody>
-										<tr>
+										<tr data-bs-toggle="modal" data-bs-target="#orderDetailModal">
 											<td>C11</td>
 											<td>SG202311130198</td>
 											<td>0001</td>
@@ -198,7 +198,7 @@
 											<td>일진글로벌</td>
 											<td>2023-11-15 08:39</td>
 										</tr>
-										<tr>
+										<tr data-bs-toggle="modal" data-bs-target="#orderDetailModal">
 											<td>C11</td>
 											<td>SG202311130198</td>
 											<td>0001</td>
@@ -222,13 +222,13 @@
 						</div>
 						<!-- 검색조건입력 //-->
 
-						<!-- 하단고정 버튼 -->
+						<!-- 하단고정 버튼 
 						<ul class="button-bottom">
 							<li>
 								<input type="submit" id="btn_regist" value="저장" class="btn btn-regist col-100">
 							</li>
 						</ul>
-						<!-- 하단고정 버튼 //-->
+						하단고정 버튼 //-->
 					</fieldset>
 				</form>
 			</div>
@@ -268,6 +268,100 @@
 		</div>
     </div>
 	<!-- alert modal popup //-->
+
+
+	<!-- 상세팝업 -->
+	<div class="modal detail-modal fade" id="orderDetailModal" tabindex="-1" aria-labelledby="orderDetailModalLabel" aria-hidden="true" data-bs-backdrop="false">
+		<div class="modal-dialog modal-dialog-centered modal-fullscreen">
+			<div class="modal-content">
+
+				<div class="modal-body">				
+				<!-- 내용 -->
+				<!-- Seach table area -->
+				<div class="search-section-1">
+					<div class="search-table-area">
+						<table class="table-search1" width="100%">
+							<col width="25%">
+							<col width="75%">
+							<tbody>										
+								<tr>
+									<th scope="row">PON</th>
+									<td>
+										<input type="text" id="" value="" class="form-control input-text full-size" />
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">지시량</th>
+									<td>
+										<input type="text" id="" value="" class="form-control input-text full-size" />
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">상차량</th>
+									<td>
+										<input type="text" id="" value="" class="form-control input-text full-size" />
+									</td>
+								</tr>
+							</tbody>
+						</table>						
+					</div>
+				</div>
+				<!-- Seach table area //-->
+
+				<div class="scroll-vertical5" style="margin: 0 0px 50px 0; height: auto;">
+					<div class="table-wrap" style="min-width: 500px; width: 100%;">
+						<table class="table-list1" id="listView2" style="width: 100%;">
+							<thead>
+								<tr>											
+									<th scope="col" width="70">선택</th>
+									<th scope="col" width="70">지정번들</th>
+									<th scope="col">번들</th>
+									<th scope="col">상차중량</th>
+									<th scope="col">야적번호</th>
+									<th scope="col">창원)LOT</th>
+									<th scope="col">
+										창원)제품번호 <br/>
+										단조)PON
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><input type="checkbox" /></td>
+									<td><input type="checkbox" /></td>
+									<td>G018</td>
+									<td>2176</td>
+									<td>C11Q205</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" /></td>
+									<td><input type="checkbox" /></td>
+									<td>G018</td>
+									<td>2176</td>
+									<td>C11Q205</td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- 내용 //-->
+				</div>
+
+				<div class="modal-footer">					
+					<button type="button" class="btn btn-close" data-bs-dismiss="modal">닫기</button>
+					<button type="button" class="btn btn-cancle" data-bs-dismiss="modal">상차 취소</button>
+					<button type="button" class="btn btn-regist" onclick="fn_confirm(this);">저장</button>					
+				</div>
+
+			</div>
+		</div>
+    </div>
+	<!-- 상세팝업 //-->
+
 	<!-- Footer -->
 	
     <!-- loading Modal -->
