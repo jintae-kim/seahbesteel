@@ -1253,3 +1253,151 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 .detail-modal .modal-footer .btn-cancle {
   background-color:#263139;
 }
+
+
+/* login page */
+.login-body {
+  background: linear-gradient(#2a3339 50%, #374047);
+}
+
+.login-wrap {
+  height: 100vh;
+  width: 100%;  
+  background-image:url('/pda/images/login-back.jpg');
+  background-size:100%;
+  background-repeat: no-repeat;
+  background-position: center center;  
+}
+
+.login-wrap .login-box {
+  margin:0 auto;
+  max-width:360px;
+  padding:50px;
+  box-sizing: border-box;
+}
+
+.login-wrap .login-box .login-logo {  
+  margin-bottom: 100px;
+}
+
+.login-wrap .login-box .login-logo img {
+  width: 110px;
+}
+
+.login-wrap .login-box .login-tit {
+  margin-bottom: 40px;
+}
+
+.login-wrap .login-box .login-tit img {
+  width: 160px;
+}
+
+.login-wrap .login-box .login-input-wrap {
+  background-image:url('/pda/images/login-input.png');
+  background-repeat: no-repeat;
+  background-size:cover;
+  position: relative;
+}
+
+.login-wrap .login-box .login-input-wrap input[type=text],
+.login-wrap .login-box .login-input-wrap input[type=password] {
+  width: 100%;
+  height: 44px;
+  color:#adb5ba;
+  padding-left:40px;
+}
+
+.login-wrap .login-box .login-input-wrap.id-box {
+  margin-bottom: 16px;
+}
+
+.login-wrap .login-box .login-input-wrap.pw-box {
+  margin-bottom: 12px;
+}
+
+.login-wrap .login-box .login-input-wrap.id-box::after {
+  content:"";
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-image: url('/pda/images/login-icon-01.png');
+  background-size:100%;
+  background-position: center;
+  left:12px;
+  top:10px;
+}
+
+.login-wrap .login-box .login-input-wrap.pw-box::after {
+  content:"";
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-image: url('/pda/images/login-icon-02.png');
+  background-size:100%;
+  background-position: center;
+  left:12px;
+  top:10px;
+}
+
+.login-wrap .login-box .save-id {
+  position: relative;  
+  padding-left: 4px;
+  margin-bottom: 20px;
+}
+
+.login-wrap .login-box .save-id .chk-save {
+  position: absolute;
+  left:-999px;
+  width: 1px;
+  height: 1px;
+  visibility: hidden;
+}
+
+.login-wrap .login-box .chk-save + label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.login-wrap .login-box .chk-save + label .save-id-check {
+  display: inline-block;
+  border:2px solid #db461d;
+  width: 18px;
+  height: 18px;  
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+
+.login-wrap .login-box .chk-save:checked + label .save-id-check::after {
+  content: "";
+  display: block;
+  width: 9px;
+  height: 9px;
+  background-color: #db461d;
+  border-radius: 50%;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-wrap .login-box .save-id-text {
+  color:#6e777c;
+  margin-left:8px;
+  line-height: normal;
+}
+
+.login-wrap .login-box .login-button {
+  width: 100%;
+  background-image: url('/pda/images/login-button.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: transparent;
+  color:#fff;
+  font-weight: 600;
+  font-size:18px;
+  padding:14px 0;
+}
