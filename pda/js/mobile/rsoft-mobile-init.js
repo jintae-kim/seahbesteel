@@ -161,5 +161,21 @@ $(document).ready(function() {
     //    parent.history.back();
     //    return false;
     //});
+
+
+
+    //main tab menu
+    $('.main-tab-menu').click(function(){
+
+        const chkTab = $(this).data('tab');
+
+        console.log(chkTab);
+
+        $('.main-tab-menu').removeClass('active');
+        $(this).addClass('active');
+        $('.tab-cont').removeClass('active');
+        $('.tab' + chkTab).addClass('active');
+    });
+
 });
 

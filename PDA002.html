@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+	<meta name="description" content="SeAH BESTEEL" />
+	<meta name="keywords" content="SeAH BESTEELL,통합외주관리시스템" />
+
+	<meta http-equiv="cache-control" content="max-age=0" />
+	<meta http-equiv="cache-control" content="no-store" />
+	<meta http-equiv="expires" content="-1" />
+	<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+	<meta http-equiv="pragma" content="no-cache" />
+		
+	<!-- Open Graph -->
+	<meta property="og:title" content="SeAH BESTEEL">
+    <meta property="og:image" content="./pda/images/app_icon.png">
+	<meta property="og:description" content="SeAH BESTEEL">
+
+	<link rel="shortcut icon" type="image/x-icon" href="./pda/images/favicon.ico">
+	
+	<!-- Bootstrap CSS -->
+ 	<link rel="stylesheet" type="text/css" href="./pda/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="./pda/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="./pda/css/mobile/reset-mobile.css" />
+	
+	<link rel="stylesheet" type="text/css" href="./pda/css/mobile/rsoft-mobile.css?v=4" />
+	<title>SeAH Besteel</title>
+</head>
+
+<body>
+
+    <!-- Aside -->
+    <div id="aside" class="aside-wrap">
+        <div class="aside-head">
+            <div class="headline">
+                <p class="aside-logo">SeAH Besteel</p>
+                <button type="button" class="menu-close">Close</button>
+    
+                <div class="user-name">
+                    <span class="user-img"><img src="/pda/images/user-photo.png" width="30" alt="" /> </span>
+                    <p class="user-info">
+                        <span class="sup">SEAH BESTEEL PDA SERVICE</span>
+                        <span class="user"><span>홍길동...님</span> <strong>오전</strong>도 힘내세요!</span>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Function menu -->
+            <ul class="aside-func-menu">
+                <li><a href="/pda/mobile/pwChange" class="config">비밀번호변경</a></li>
+                <li><a href="/pda/pda/notice" class="msg"><span class="count">48</span> 알림</a></li>
+                <li><a href="/pda/logout" class="logout">로그아웃</a></li>
+            </ul>
+            <!-- Function menu //-->
+        </div>
+        
+        <!-- Aside menu -->
+        <ul class="aside-nav">
+            <li><a href="#" class="">입고관리</a>
+                <ul class="">
+                    <li class=""><a href="#" class="">제품 저장위치 관리</a></li>
+                    <li class=""><a href="#" class="">야드 불가품 관리</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="">상차관리</a>
+                <ul class="">
+                    <li class=""><a href="#" class="">상차 주문 확인</a></li>
+                    <li class=""><a href="#" class="">출하 이미지 등록</a></li>
+                    <li class=""><a href="#" class="">컨테이너 이미지 등록</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="">재고관리</a>
+                <ul class="">
+                    <li class=""><a href="#" class="">재고 실사 관리</a></li>
+                    <li class=""><a href="#" class="">제품 위치정보 확인</a></li>
+                </ul>
+            </li>
+        </ul>
+        <!-- Aside menu //-->
+        <div class="copyright">COPYRIGHT (C) SeAH Besteel Corp. ALL RIGHTS RESERVED.</div>
+    </div>
+    <!-- Aside //-->
+
+    <div class="main-wrap">
+
+        <div class="main-top">
+            <div class="main-header">
+                
+                <img src="/pda/images/logo-seahbesteel.png" alt="logo">
+
+                <div class="main-top-icon-box">
+                    <div class="alram">
+                        <span class="alram-count">24</span>
+                    </div>
+                    <button type="button" class="btn menu-open">Menu</button>
+                </div>
+
+            </div>
+
+            <div class="main-txt">
+                <div class="user">
+                    <span>홍길동...님</span> 
+                    <strong>오전</strong>도 힘내세요!
+                </div>
+
+                <span class="sup">SEAH BESTEEL PDA SYSTEM</span>
+            </div>
+        </div>
+
+        <div class="main-bottom">
+            
+            <ul class="main-tab">
+                <li class="main-tab-menu active" data-tab="1">입고관리</li>
+                <li class="main-tab-menu" data-tab="2">상차관리</li>
+                <li class="main-tab-menu" data-tab="3">재고관리</li>
+            </ul>
+
+            <div class="tab-container">
+                <div class="tab-cont tab1 active">
+                    <div class="tab-menu">
+                        <a href="#" class="tm-link"></a>
+                        <p class="tm-text">제품 저장위치<br/>관리</p>
+                        <div class="tab-icon icon-01"></div>
+                    </div>
+
+                    <div class="tab-menu">
+                        <a href="#" class="tm-link"></a>
+                        <p class="tm-text">야드 불가품<br/>관리</p>
+                        <div class="tab-icon icon-02"></div>
+                    </div>
+                </div>
+
+                <div class="tab-cont tab2">
+                    <div class="tab-menu">
+                        <a href="#" class="tm-link"></a>
+                        <p class="tm-text">상차<br/>주문확인</p>
+                        <div class="tab-icon icon-06"></div>
+                    </div>
+
+                    <div class="tab-box">
+                        <div class="tab-menu">
+                            <a href="#" class="tm-link"></a>
+                            <p class="tm-text">출하 이미지<br/>등록</p>
+                            <div class="tab-icon icon-04"></div>
+                        </div>
+
+                        <div class="tab-menu">
+                            <a href="#" class="tm-link"></a>
+                            <p class="tm-text">컨테이너 이미지<br/>등록</p>
+                            <div class="tab-icon icon-05"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-cont tab3">
+                    <div class="tab-menu">
+                        <a href="#" class="tm-link"></a>
+                        <p class="tm-text">재고 실사<br/>관리</p>
+                        <div class="tab-icon icon-03"></div>
+                    </div>
+
+                    <div class="tab-menu">
+                        <a href="#" class="tm-link"></a>
+                        <p class="tm-text">제품 위치정보<br/>조회</p>
+                        <div class="tab-icon icon-01"></div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        
+        <p class="copyright">COPYRIGHTⓒ SeAH Besteel Corp. ALL RIGHTS RESERVED.</p>
+
+    </div>
+
+
+    
+
+
+	<!-- alert modal popup -->
+    <div class="modal barcode-modal fade" id="barcodeDirectModal" tabindex="-1" aria-labelledby="barcodeDirectModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-sm">
+			<div class="modal-content">
+
+				<div class="modal-header">
+				<h5 class="modal-title" id="barcodeDirectModalLabel">바코드 직접 입력</h5>
+				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				</div>
+
+				<div class="modal-body">
+				
+				<!-- 내용 -->
+				<div class="modal-msg1">
+					<input type="text" id="direct-barcode" name="direct-barcode" value="" class="form-control full-size" autocomplete="off" placeholder="바코드를 입력하세요" />
+					<input type="hidden" id="hid_direct_barcode" value="">
+				</div>
+				<!-- 내용 //-->
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+					<button type="button" id="btn_direct_barcode" class="btn btn-primary confirm" onclick="fn_confirm(this);">확인</button>
+				</div>
+
+			</div>
+		</div>
+    </div>
+	<!-- alert modal popup //-->	
+
+	<!-- Footer -->
+	
+    <!-- loading Modal -->
+	<div class="modal" id="loadingleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
+		<div class="modal-dialog loading-modal">
+			<div class="modal-content">
+			  
+				<div class="modal-body">
+				
+		            <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem; z-index: 20;">
+	              		<span class="sr-only">Loading...</span>
+		            </div>
+	
+				</div>
+			  
+			</div>
+		</div>
+	</div>
+    <!-- loading Modal //-->
+    
+	<!-- Loading -->
+	<div class="loading" style="display : none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 9999; width: 100%; height: 100%; text-align: center; background: rgba(255,255,255,0.8);">
+		<img src=./pda/images/loading.gif width="60" alt="loading" style="position: absolute;" />
+	</div>
+	<!-- Loading //-->
+	<!-- Curtain -->
+	<div class="curtain"></div>
+	<!-- Curtain //-->
+
+
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->  
+	<script src="./pda/js/jquery-3.3.1.min.js" charset="utf-8"></script>
+	<script src="./pda/js/jquery-ui.min.js" charset="utf-8"></script>
+	<script src="./pda/js/jquery.validate.min.js" charset="utf-8"></script>
+	
+	<script src="./pda/js/popper.min.js" charset="utf-8"></script>
+	<script src="./pda/js/bootstrap.min.js" charset="utf-8"></script>		<!-- v4 -->
+	
+	<script src="./pda/js/mobile/rsoft-mobile-init.js?v=1" charset="utf-8"></script>
+	<script src="./pda/js/rsoft-page.js?t=4" charset="utf-8"></script><!-- project함수 -->
+	<script src="./pda/js/rsoft-common.js?v=1" charset="utf-8"></script>
+	<script src="./pda/js/mobile/rsoft-mobile.js?v=4" charset="utf-8"></script>
+	<script src="./pda/js/mobile/device-uuid.min.js" charset="utf-8"></script>
+	
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+	<!-- Footer //-->
+
+</body>
+</html>
