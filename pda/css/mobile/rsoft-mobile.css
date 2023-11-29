@@ -1258,10 +1258,11 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 /* login page */
 .login-body {
   background: linear-gradient(#2a3339 50%, #374047);
+  height: auto;
 }
 
 .login-wrap {
-  height: 100vh;
+  min-height: 100%;
   width: 100%;  
   background-image:url('/pda/images/login-back.jpg');
   background-size:100%;
@@ -1295,7 +1296,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 .login-wrap .login-box .login-input-wrap {
   background-image:url('/pda/images/login-input.png');
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size:100%;
   position: relative;
 }
 
