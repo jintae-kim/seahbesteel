@@ -1412,7 +1412,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 
 /* main page */
 .main-wrap {
-  height:100vh;
+  min-height:100%;
   width: 100%;
   background:linear-gradient(#22262e 50%, #1c1e24);
   padding:30px 0;
@@ -1621,8 +1621,6 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   bottom: 20px;
 }
 
-.main-wrap .copyright {
-  position:fixed;
-  bottom:0;
+.main-wrap .copyright {  
   width: 100%;
 }
