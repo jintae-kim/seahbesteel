@@ -1625,3 +1625,61 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 .main-wrap .copyright {  
   width: 100%;
 }
+
+
+/* password page */
+.pass-wrap {
+  padding:40px;
+  box-sizing: border-box;
+}
+
+.pass-wrap .pass-box {
+  position: relative;
+  margin-top: 20px;
+}
+
+.pass-wrap .pass-box input {
+  width: 100%;
+  height: 44px;
+  padding-left:44px;
+  border:1px solid #d7d7d7;
+  border-radius: 6px;
+}
+
+.pass-wrap .pass-box .pass-icon {
+  display: block;
+  width:24px;
+  height:24px;
+  position: absolute;
+  top:50%;
+  left:10px;
+  transform: translateY(-50%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pass-wrap .pass-box .pass-icon.login {
+  background-image: url('/pda/images/pass-icon-01.png');
+}
+
+.pass-wrap .pass-box .pass-icon.password {
+  background-image: url('/pda/images/pass-icon-02.png');
+}
+
+.pass-wrap .pass-text {
+  color:#5c646a;
+  padding-left:14px;
+  font-size:12px;
+  margin-top: 4px;
+}
+
+.pass-wrap .pass-btn {
+  margin-top: 70px;
+  width: 100%;
+  height: 50px;
+  background-color:#db461d;
+  color:#fff;
+  font-weight: 700;
+  font-size:16px;
+}
