@@ -1683,3 +1683,57 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   font-weight: 700;
   font-size:16px;
 }
+
+
+/* Setting page */
+.setting-wrap {
+  padding:60px 40px 0;
+}
+
+.setting-wrap .setting-title {
+  font-size:30px;
+  line-height:normal;
+  color:#000;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.setting-wrap .setting-subTit {
+  font-size:15px;
+  color:#5c646a;
+  margin-bottom: 10px;
+}
+
+.setting-wrap .setting-select {
+  height: 46px;
+  line-height: 46px;
+  border-radius: 8px;
+  margin-top: 10px;
+  padding:0 15px;
+  border-color: #d7d7d7;
+  outline: none;
+}
+
+.setting-wrap .setting-button-wrap {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.setting-wrap .setting-button-wrap button {
+  display: inline-block;
+  width: calc(50% - 5px);
+  height: 50px;
+  color:#fff;
+  font-size:16px;
+  font-weight: normal;
+}
+
+.setting-wrap .setting-button-wrap button.setting-close-button {
+  background-color:#838a90;
+}
+
+.setting-wrap .setting-button-wrap button.setting-save-button {
+  background-color: #db461d;
+}
