@@ -278,7 +278,22 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
 .aside-wrap .aside-head {position: relative; padding: 0 0 0;}
 .aside-wrap .aside-head .logo {display: inline-block; padding: 0 0 0 15px;}
 .aside-wrap .aside-head .nav-close {position: absolute; right: 18px;}
-.aside-wrap .aside-head .user-name {display: flex; margin-top: 28px; padding: 0 16px 28px 16px; vertical-align: middle; align-items: center; justify-content: left; color: #fff; font-weight: 300; letter-spacing: -1px;}
+.aside-wrap .aside-head .user-name {display: flex; margin-top: 28px; padding: 0 16px 28px 16px; vertical-align: middle; align-items: center; justify-content: space-between; color: #fff; font-weight: 300; letter-spacing: -1px;}
+.aside-wrap .aside-head .user-name .user-name-box {
+  display: flex;
+  align-items: center;  
+}
+.aside-wrap .aside-head .user-name .logout-button {
+  display: block;
+  color:#fff;
+  font-size: 12px;
+  font-weight: 400;
+  padding-top:26px;
+  background-image:url('data:image/svg+xml,<svg fill="%23fff" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="%23fff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g><g><path d="M358.401,192V12.8c0-7.066-5.734-12.8-12.8-12.8h-332.8c-7.066,0-12.8,5.734-12.8,12.8v486.4 c0,7.066,5.734,12.8,12.8,12.8h332.8c7.066,0,12.8-5.734,12.8-12.8V320h-25.6v166.4h-307.2V25.6h307.2V192H358.401z"></path></g></g><g><g><path d="M508.161,246.844l-74.931-76.595c-4.941-5.06-13.047-5.146-18.099-0.205c-5.052,4.941-5.146,13.056-0.205,18.099 l53.854,55.057H193.673c-7.066,0-12.8,5.734-12.8,12.8c0,7.066,5.734,12.8,12.8,12.8h275.098l-53.854,55.057 c-4.941,5.043-4.847,13.158,0.205,18.099c5.06,4.941,13.158,4.855,18.099-0.205l75.128-76.8 C513.289,259.9,513.204,251.785,508.161,246.844z"></path></g></g></g></svg>') ;
+  background-size:20px 20px;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
 .aside-wrap .aside-head .user-name .user-img {margin-right: 10px; vertical-align: middle;}
 .aside-wrap .aside-head .user-name .user-img img {width: 30px; height: 30px; border-radius: 100%;}
 .aside-wrap .aside-head .user-name .user-info .sup {
