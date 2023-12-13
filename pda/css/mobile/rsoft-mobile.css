@@ -201,6 +201,55 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
   outline: 0; transition: all 0.4s;
 }
 
+/* radio */
+.radio-box {
+  position: relative;
+}
+
+.radio-box .radio-check {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border:none;
+  top:0;
+  left:0;
+  visibility: hidden;
+}
+
+.radio-box .radio-check + .radio-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.radio-box .radio-check + .radio-label .radio-icon {
+  position: relative;
+  display: inline-block;
+  border: 2px solid #2e3168;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -2px;
+  margin-right: 4px;
+}
+
+.radio-box .radio-check:checked + .radio-label .radio-icon {
+  background-color: #2e3168;
+}
+
+.radio-box .radio-check:checked + .radio-label .radio-icon::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
 
 
 /*** Layout ***/
