@@ -1095,7 +1095,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   padding:30px 15px;
 }
 
-.barcode-modal .modal-content .modal-body #direct-barcode {
+.barcode-modal .modal-content .modal-body .direct-barcode-input {
   border:1px solid #8e90ad;
   height: 44px;
   border-radius: 8px;
