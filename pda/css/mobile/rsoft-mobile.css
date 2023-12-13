@@ -204,6 +204,7 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
 /* radio */
 .radio-box {
   position: relative;
+  display: flex;
 }
 
 .radio-box .radio-check {
@@ -220,6 +221,7 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
   display: flex;
   align-items: center;
   cursor: pointer;
+  margin-right: 8px;
 }
 
 .radio-box .radio-check + .radio-label .radio-icon {
